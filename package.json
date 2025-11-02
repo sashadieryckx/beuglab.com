@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.1.0",
-    "@splinetool/runtime": "^1.10.42",
+    "@splinetool/runtime": "^1.10.91",
     "@storyblok/vue": "^2.1.2",
     "@vueuse/head": "^2.0.0",
     "axios": "^1.9.0",

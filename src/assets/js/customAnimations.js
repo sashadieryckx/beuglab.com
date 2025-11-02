@@ -5,7 +5,7 @@ import SplitType from 'split-type'
 gsap.registerPlugin(ScrollTrigger)
 
 export function homePageLoadAnimation() {
-  new SplitType('#hero-heading', { types: 'chars' })
+  new SplitType('#hero-heading h1', { types: 'chars' })
 
   // Check if this is the first load of the app
   const isFirstLoad = !sessionStorage.getItem('hasLoadedBefore')

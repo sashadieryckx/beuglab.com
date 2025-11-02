@@ -52,12 +52,18 @@
   padding-bottom: 2em;
   font-size: 1.25em;
   line-height: 1.5em;
-  text-wrap: auto;
-  word-wrap: break-word;
+  text-wrap: wrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 #hero-c2a {
   position: relative;
   z-index: 5;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 /* TABLET 1 [GLOBAL] */
 @media (min-width: 768px) {
