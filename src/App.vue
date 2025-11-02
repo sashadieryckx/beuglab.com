@@ -13,7 +13,7 @@ import { VueLenis, useLenis } from 'lenis/vue'
 import { useRoute } from 'vue-router'
 import { watch, nextTick, onMounted, onUnmounted } from 'vue'
 // Meta Head
-import { useHead } from '@vueuse/head'
+import { useSEO, organizationSchema } from '@/composables/useSEO'
 // Stores ticker function for proper cleanup
 let rafCallback = null
 let resizeObserver = null
@@ -153,32 +153,13 @@ watch(
   },
 )
 
-useHead({
-  title: 'Beug Lab | Innovative Research',
-  meta: [
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      property: 'og:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-    {
-      property: 'og:image',
-      content: '',
-    },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      name: 'twitter:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-    {
-      name: 'twitter:image',
-      content: '',
-    },
-  ],
+// Set up global SEO defaults with organization schema
+useSEO({
+  title: '',
+  description: 'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
+  path: '/',
+  image: '/logo.png',
+  schema: organizationSchema
 })
 </script>
 <template>

@@ -118,19 +118,13 @@ onUnmounted(() => {
   }
 })
 
-// Meta Head
-import { useHead } from '@vueuse/head'
-useHead({
-  title: 'Beug Lab | Gallery',
-  meta: [
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      property: 'og:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-  ],
+// SEO Configuration
+import { useSEO } from '@/composables/useSEO'
+useSEO({
+  title: 'Gallery',
+  description: 'Explore the Beug Lab gallery showcasing our team activities, events, and laboratory culture. Discover what we get up to outside the lab and see the people behind the research.',
+  path: '/gallery',
+  image: '/logo.png'
 })
 </script>
 

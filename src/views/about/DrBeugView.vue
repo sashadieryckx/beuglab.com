@@ -69,19 +69,20 @@ onMounted(async () => {
   }
 })
 
-// Meta Head
-import { useHead } from '@vueuse/head'
-useHead({
-  title: 'Beug Lab | Dr. Beug',
-  meta: [
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      property: 'og:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-  ],
+// SEO Configuration
+import { useSEO, createPersonSchema } from '@/composables/useSEO'
+useSEO({
+  title: 'Dr. Shawn Beug',
+  description: 'Meet Dr. Shawn Beug, internationally recognized cancer biologist specializing in molecular mechanisms of tumor progression, metastasis, and treatment resistance. Assistant Professor at University of Ottawa and Scientist at CHEO Research Institute.',
+  path: '/about/dr-beug',
+  image: '/logo.png',
+  schema: createPersonSchema({
+    name: 'Dr. Shawn Beug',
+    jobTitle: 'Assistant Professor, Scientist, Canada Research Chair (Tier 2) in Cancer Biology and Translational Research',
+    description: 'Dr. Shawn Beug is an internationally recognized cancer biologist specializing in the molecular mechanisms of tumor progression, metastasis, and treatment resistance.',
+    image: 'https://beuglab.ca/logo.png',
+    url: 'https://beuglab.ca/about/dr-beug'
+  })
 })
 </script>
 <template>

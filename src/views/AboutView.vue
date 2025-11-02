@@ -123,19 +123,13 @@ onBeforeUnmount(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
 })
 
-// Meta Head
-import { useHead } from '@vueuse/head'
-useHead({
-  title: 'Beug Lab | About',
-  meta: [
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      property: 'og:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-  ],
+// SEO Configuration
+import { useSEO } from '@/composables/useSEO'
+useSEO({
+  title: 'About',
+  description: 'Learn about the Beug Lab at CHEO RI. We are interested in cancer biology with respect to understanding cell death mechanisms and immunity, focusing on the Inhibitors of Apoptosis and their role in cancer development.',
+  path: '/about',
+  image: '/logo.png'
 })
 </script>
 <template>

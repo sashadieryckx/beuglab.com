@@ -1,19 +1,13 @@
 <script setup>
 import PubmedPublications from '@/components/PubmedPublications.vue'
 
-// Meta Head
-import { useHead } from '@vueuse/head'
-useHead({
-  title: 'Beug Lab | Publications',
-  meta: [
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      property: 'og:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-  ],
+// SEO Configuration
+import { useSEO } from '@/composables/useSEO'
+useSEO({
+  title: 'Publications',
+  description: 'Browse the Beug Lab scientific publications featuring peer-reviewed research articles on cancer biology, cell death mechanisms, immune responses, and therapeutic development published in leading journals.',
+  path: '/publications',
+  image: '/logo.png'
 })
 </script>
 <template>

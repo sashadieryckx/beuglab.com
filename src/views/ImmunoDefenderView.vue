@@ -23,19 +23,13 @@ onMounted(() => {
   }
 })
 
-// Meta Head
-import { useHead } from '@vueuse/head'
-useHead({
-  title: 'Beug Lab | Mini Game',
-  meta: [
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Beug Lab | Driven by Curiosity, Guided by Science' },
-    {
-      property: 'og:description',
-      content:
-        'The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies. Led by Dr. Shawn Beug, the lab bridges fundamental research with clinical application to improve health outcomes.',
-    },
-  ],
+// SEO Configuration
+import { useSEO } from '@/composables/useSEO'
+useSEO({
+  title: 'Immuno Defender',
+  description: 'Play Immuno Defender, an educational mini-game from the Beug Lab that teaches about immune system responses and cancer biology through interactive gameplay.',
+  path: '/gallery/immuno-defender',
+  image: '/logo.png'
 })
 </script>
 <template>

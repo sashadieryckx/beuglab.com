@@ -6,6 +6,15 @@ import HeroSection from '@/components/home/HeroSection.vue'
 import ObjectiveSection from '@/components/home/ObjectiveSection.vue'
 import WorkSection from '@/components/home/WorkSection.vue'
 import TeamSection from '@/components/home/TeamSection.vue'
+import { useSEO } from '@/composables/useSEO'
+
+// SEO Configuration for Home Page
+useSEO({
+  title: 'Innovative Research',
+  description: 'Driven by Curiosity, Guided by Science. The Beug Lab investigates the molecular mechanisms underlying human disease to identify new therapeutic strategies for cancer and immune disorders.',
+  path: '/',
+  image: '/logo.png'
+})
 
 // Add ref to track if component is still mounted
 const isMounted = ref(false)
